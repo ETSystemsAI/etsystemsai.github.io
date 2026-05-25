@@ -2,143 +2,246 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>AI Math Tutor Bot</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Math Tutor</title>
 
   <style>
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Arial, sans-serif;
-      background: #ffffff;
-      color: #111;
+
+    :root{
+      --text:#111111;
+      --muted:#666666;
+      --border:#ececec;
+      --bg:#ffffff;
+      --soft:#f7f7f8;
     }
 
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 60px 20px;
+    *{
+      box-sizing:border-box;
     }
 
-    /* HEADER */
-    .top-badge {
-      display: inline-block;
-      font-size: 12px;
-      padding: 6px 10px;
-      border: 1px solid #e5e5e5;
-      border-radius: 999px;
-      color: #444;
-      margin-bottom: 20px;
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--text);
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Arial,sans-serif;
+      line-height:1.6;
+      -webkit-font-smoothing:antialiased;
     }
 
-    h1 {
-      font-size: 44px;
-      letter-spacing: -1px;
-      margin: 0;
+    .container{
+      max-width:1100px;
+      margin:0 auto;
+      padding:40px 24px 100px;
     }
 
-    .subtitle {
-      font-size: 18px;
-      color: #555;
-      margin-top: 14px;
-      max-width: 700px;
-      line-height: 1.5;
+    .badge{
+      display:inline-block;
+      border:1px solid var(--border);
+      border-radius:999px;
+      padding:7px 12px;
+      font-size:12px;
+      color:#555;
+      margin-bottom:22px;
+      background:white;
     }
 
-    /* HERO */
-    .hero {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-      align-items: center;
-      margin-top: 50px;
+    h1{
+      font-size:64px;
+      line-height:1;
+      letter-spacing:-2px;
+      margin:0;
+      font-weight:700;
     }
 
-    .hero img {
-      width: 100%;
-      border-radius: 18px;
-      box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+    .subtitle{
+      margin-top:24px;
+      max-width:760px;
+      font-size:22px;
+      color:var(--muted);
+      line-height:1.5;
     }
 
-    /* BUTTON */
-    .btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 18px;
-      background: #111;
-      color: #fff;
-      border-radius: 12px;
-      text-decoration: none;
-      font-weight: 500;
+    .hero{
+      display:grid;
+      grid-template-columns:1.1fr 0.9fr;
+      gap:48px;
+      align-items:center;
+      margin-top:70px;
     }
 
-    .btn:hover {
-      opacity: 0.85;
+    .hero-image{
+      width:100%;
+      border-radius:24px;
+      box-shadow:
+        0 10px 30px rgba(0,0,0,0.08),
+        0 30px 80px rgba(0,0,0,0.08);
     }
 
-    /* SECTIONS */
-    .section {
-      margin-top: 70px;
+    .button{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      background:#111;
+      color:white;
+      text-decoration:none;
+      padding:15px 22px;
+      border-radius:14px;
+      font-weight:600;
+      margin-top:26px;
+      transition:0.2s;
     }
 
-    .section h2 {
-      font-size: 22px;
-      margin-bottom: 20px;
+    .button:hover{
+      transform:translateY(-1px);
+      opacity:0.92;
     }
 
-    /* CARDS */
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 16px;
+    .section{
+      margin-top:90px;
     }
 
-    .card {
-      border: 1px solid #eee;
-      border-radius: 16px;
-      padding: 16px;
-      background: #fff;
+    .section-title{
+      font-size:34px;
+      letter-spacing:-1px;
+      margin-bottom:22px;
     }
 
-    .card p {
-      color: #555;
-      margin: 8px 0 0;
-      line-height: 1.5;
+    .card{
+      border:1px solid var(--border);
+      background:white;
+      border-radius:24px;
+      padding:30px;
     }
 
-    /* QR */
-    .qr-wrap {
-      display: flex;
-      gap: 30px;
-      align-items: center;
-      border: 1px solid #eee;
-      padding: 20px;
-      border-radius: 18px;
+    .story{
+      background:linear-gradient(to bottom right,#fafafa,#ffffff);
     }
 
-    .qr-wrap img {
-      width: 160px;
-      border-radius: 12px;
+    .story p{
+      font-size:21px;
+      line-height:1.9;
+      color:#222;
+      margin:0;
     }
 
-    .muted {
-      color: #666;
-      font-size: 14px;
+    .quote{
+      margin-top:34px;
+      font-size:34px;
+      line-height:1.35;
+      letter-spacing:-1px;
+      font-weight:500;
     }
 
-    /* MOBILE */
-    @media (max-width: 800px) {
-      .hero {
-        grid-template-columns: 1fr;
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:18px;
+    }
+
+    .mini-card{
+      border:1px solid var(--border);
+      border-radius:20px;
+      padding:22px;
+      background:white;
+    }
+
+    .mini-card h3{
+      margin-top:0;
+      margin-bottom:10px;
+      font-size:20px;
+    }
+
+    .mini-card p{
+      margin:0;
+      color:#555;
+      line-height:1.7;
+    }
+
+    .demo{
+      background:#0f0f10;
+      color:white;
+      border-radius:28px;
+      padding:34px;
+    }
+
+    .chat{
+      display:flex;
+      flex-direction:column;
+      gap:16px;
+      margin-top:26px;
+    }
+
+    .bubble{
+      max-width:80%;
+      padding:16px 18px;
+      border-radius:18px;
+      font-size:16px;
+      line-height:1.6;
+    }
+
+    .user{
+      background:#1f1f20;
+      align-self:flex-end;
+    }
+
+    .ai{
+      background:#ffffff;
+      color:#111;
+      align-self:flex-start;
+    }
+
+    .qr-wrap{
+      display:flex;
+      gap:40px;
+      align-items:center;
+      flex-wrap:wrap;
+    }
+
+    .qr img{
+      width:210px;
+      border-radius:22px;
+      border:1px solid var(--border);
+      box-shadow:0 12px 35px rgba(0,0,0,0.08);
+      background:white;
+      padding:10px;
+    }
+
+    .muted{
+      color:var(--muted);
+    }
+
+    footer{
+      margin-top:100px;
+      padding-top:30px;
+      border-top:1px solid var(--border);
+      color:#777;
+      font-size:14px;
+    }
+
+    @media(max-width:900px){
+
+      h1{
+        font-size:46px;
       }
 
-      .grid {
-        grid-template-columns: 1fr;
+      .hero{
+        grid-template-columns:1fr;
       }
 
-      .qr-wrap {
-        flex-direction: column;
-        align-items: flex-start;
+      .grid{
+        grid-template-columns:1fr;
       }
+
+      .quote{
+        font-size:28px;
+      }
+
+      .story p{
+        font-size:18px;
+      }
+
     }
+
   </style>
 </head>
 
@@ -146,95 +249,256 @@
 
 <div class="container">
 
-  <div class="top-badge">TELEGRAM AI EDUCATION TOOL</div>
+  <div class="badge">
+    TELEGRAM AI EDUCATION TOOL
+  </div>
 
   <h1>AI Math Tutor</h1>
 
   <div class="subtitle">
-    A Telegram AI assistant that turns any math problem into clear step-by-step reasoning — not just answers, but understanding.
+    A purpose-built AI tutoring system that helps students truly understand mathematics —
+    not just generate answers.
   </div>
 
   <!-- HERO -->
+
   <div class="hero">
 
     <div>
-      <h2 style="font-size:18px; color:#666; font-weight:500;">
-        From confusion → clarity in seconds
-      </h2>
 
-      <a class="btn" href="https://t.me/master_your_math_bot" target="_blank">
-        Open in Telegram →
+      <div class="quote">
+        From confusion → clarity.
+      </div>
+
+      <p class="subtitle">
+        Built specifically for real school math workflows using advanced language models,
+        symbolic mathematics verification, and structured tutoring logic.
+      </p>
+
+      <a class="button"
+         href="https://t.me/master_your_math_bot"
+         target="_blank">
+         🚀 Open in Telegram
       </a>
+
     </div>
 
-    <img src="AI%20Math%20Tutor%20in%20Telegram.png" alt="AI Math Tutor">
+    <div>
+      <img class="hero-image"
+           src="AI%20Math%20Tutor%20in%20Telegram.png"
+           alt="AI Math Tutor">
+    </div>
+
+  </div>
+
+  <!-- STORY -->
+
+  <div class="section">
+
+    <div class="card story">
+
+      <p>
+
+        A student sits with a math problem, unsure how to even begin.
+
+        <br><br>
+
+        They open different AI tools, try various prompts,
+        compare conflicting answers,
+        and spend more time fighting the interface than learning mathematics.
+
+        <br><br>
+
+        Generic AI systems may skip steps,
+        hallucinate calculations,
+        or explain things in ways students simply do not understand.
+
+        <br><br>
+
+        <b>AI Math Tutor is built differently.</b>
+
+        <br><br>
+
+        Instead of relying on raw chatbot output,
+        the system combines advanced language models with symbolic mathematics tools like SymPy,
+        creating a hybrid AI workflow designed specifically for education.
+
+        <br><br>
+
+        Explanations are structured to guide reasoning step-by-step,
+        helping students understand not only the answer —
+        but how to think through the problem itself.
+
+      </p>
+
+    </div>
+
+  </div>
+
+  <!-- POSITIONING QUOTE -->
+
+  <div class="section">
+
+    <div class="quote">
+      “The goal is not just to generate an answer —
+      but to guide the student through understandable reasoning.”
+    </div>
+
   </div>
 
   <!-- BEFORE / AFTER -->
+
   <div class="section">
-    <h2>Before vs After</h2>
+
+    <div class="section-title">
+      Before vs After
+    </div>
 
     <div class="grid">
 
-      <div class="card">
-        <b>Before</b>
-        <p>Stuck on homework, guessing steps, no clear reasoning path.</p>
+      <div class="mini-card">
+        <h3>Before</h3>
+        <p>
+          Confusing explanations.<br>
+          Random AI outputs.<br>
+          Multiple tabs.<br>
+          Wasted time.<br>
+          No understanding.
+        </p>
       </div>
 
-      <div class="card">
-        <b>After</b>
-        <p>Clear step-by-step explanation with full understanding of logic.</p>
+      <div class="mini-card">
+        <h3>After</h3>
+        <p>
+          One focused workflow.<br>
+          Structured explanations.<br>
+          Verified symbolic reasoning.<br>
+          Faster learning.<br>
+          Real comprehension.
+        </p>
       </div>
 
     </div>
+
+  </div>
+
+  <!-- DEMO -->
+
+  <div class="section">
+
+    <div class="demo">
+
+      <div class="section-title" style="margin-top:0;">
+        Example interaction
+      </div>
+
+      <div class="chat">
+
+        <div class="bubble user">
+          Solve: √(4x − y²) − √(y + 2) = √(4x² + y)
+        </div>
+
+        <div class="bubble ai">
+          Let’s analyze the domains first.<br><br>
+
+          Since square roots require nonnegative expressions:<br><br>
+
+          4x − y² ≥ 0<br>
+          y + 2 ≥ 0<br>
+          4x² + y ≥ 0<br><br>
+
+          Now we simplify step-by-step...
+        </div>
+
+      </div>
+
+    </div>
+
   </div>
 
   <!-- HOW IT WORKS -->
+
   <div class="section">
-    <h2>How it works</h2>
+
+    <div class="section-title">
+      How it works
+    </div>
 
     <div class="grid">
-      <div class="card">
-        <b>1. Capture</b>
-        <p>Take a photo of a math problem.</p>
+
+      <div class="mini-card">
+        <h3>1. Upload</h3>
+        <p>
+          Take a photo of a handwritten or printed math problem.
+        </p>
       </div>
 
-      <div class="card">
-        <b>2. Send</b>
-        <p>Upload it in Telegram bot.</p>
+      <div class="mini-card">
+        <h3>2. Understand</h3>
+        <p>
+          AI recognizes the task and interprets mathematical structure.
+        </p>
       </div>
 
-      <div class="card">
-        <b>3. Understand</b>
-        <p>AI reads and interprets the problem.</p>
+      <div class="mini-card">
+        <h3>3. Verify</h3>
+        <p>
+          Symbolic mathematics tools help validate calculations and logic.
+        </p>
       </div>
 
-      <div class="card">
-        <b>4. Learn</b>
-        <p>Get step-by-step explanation.</p>
+      <div class="mini-card">
+        <h3>4. Explain</h3>
+        <p>
+          The student receives understandable step-by-step reasoning.
+        </p>
       </div>
+
     </div>
+
   </div>
 
   <!-- QR -->
+
   <div class="section">
-    <h2>Try instantly</h2>
 
-    <div class="qr-wrap">
+    <div class="card qr-wrap">
 
-      <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=https://t.me/master_your_math_bot" />
+      <div class="qr">
+
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=https://t.me/master_your_math_bot"
+             alt="QR code">
+
+      </div>
 
       <div>
-        <p><b>Scan to open bot</b></p>
-        <p class="muted">No signup. Works instantly in Telegram.</p>
 
-        <a class="btn" href="https://t.me/master_your_math_bot" target="_blank">
-          Open Bot
+        <div class="section-title" style="margin-top:0;">
+          Try instantly
+        </div>
+
+        <p class="muted" style="font-size:18px;">
+          Open Telegram and start solving math problems in seconds.
+        </p>
+
+        <a class="button"
+           href="https://t.me/master_your_math_bot"
+           target="_blank">
+           Open Bot
         </a>
+
       </div>
 
     </div>
+
   </div>
+
+  <!-- FOOTER -->
+
+  <footer>
+    AI Math Tutor • Telegram-based educational AI system<br>
+    Contact: e.kate.taratuta@gmail.com
+  </footer>
 
 </div>
 
