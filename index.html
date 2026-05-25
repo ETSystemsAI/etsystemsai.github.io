@@ -6,57 +6,63 @@
 
   <style>
     body {
-      font-family: Arial, sans-serif;
-      max-width: 900px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      max-width: 980px;
       margin: 40px auto;
       padding: 20px;
       line-height: 1.6;
       color: #111;
+      background: #fff;
     }
 
     h1 {
-      font-size: 36px;
+      font-size: 42px;
       margin-bottom: 10px;
-    }
-
-    h2 {
-      margin-top: 40px;
+      letter-spacing: -0.5px;
     }
 
     .sub {
       font-size: 18px;
       color: #555;
-      margin-bottom: 20px;
+      max-width: 700px;
     }
 
     .hero {
-      text-align: center;
-      margin: 30px 0;
+      display: flex;
+      gap: 30px;
+      align-items: center;
+      margin: 40px 0;
+      flex-wrap: wrap;
     }
 
-    .hero img {
+    .hero img.main {
       width: 100%;
-      max-width: 750px;
-      border-radius: 14px;
-      box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+      max-width: 520px;
+      border-radius: 16px;
+      box-shadow: 0 18px 40px rgba(0,0,0,0.12);
     }
 
-    .button {
+    .cta {
       display: inline-block;
       padding: 14px 22px;
-      background: #2b7cff;
+      background: #111;
       color: white;
       text-decoration: none;
-      border-radius: 10px;
+      border-radius: 12px;
+      font-weight: 600;
       margin-top: 15px;
-      font-weight: bold;
     }
 
-    .box {
-      background: #f6f6f6;
+    .section {
+      margin: 50px 0;
+    }
+
+    .card {
+      background: #f7f7f8;
+      border: 1px solid #eee;
       padding: 18px;
-      border-radius: 12px;
-      margin: 20px 0;
+      border-radius: 14px;
+      margin: 15px 0;
     }
 
     .grid {
@@ -65,124 +71,154 @@
       flex-wrap: wrap;
     }
 
-    .card {
+    .grid .card {
       flex: 1;
       min-width: 250px;
-      background: #fafafa;
-      padding: 15px;
-      border-radius: 12px;
-      border: 1px solid #eee;
     }
 
-    .qr {
-      text-align: center;
-      margin-top: 20px;
+    /* QR BLOCK */
+    .qr-wrap {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      flex-wrap: wrap;
     }
 
     .qr img {
-      width: 180px;
-      border-radius: 10px;
+      width: 190px;
+      border-radius: 14px;
       border: 1px solid #ddd;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
     }
 
     .small {
       font-size: 13px;
       color: #666;
     }
+
+    .badge {
+      display: inline-block;
+      padding: 6px 10px;
+      background: #eef2ff;
+      color: #3b5bdb;
+      border-radius: 8px;
+      font-size: 12px;
+      margin-bottom: 10px;
+    }
   </style>
 </head>
 
 <body>
 
+<div class="badge">AI EDUCATION TOOL • TELEGRAM BOT</div>
+
 <h1>AI Math Tutor Bot</h1>
 
 <p class="sub">
-A Telegram-based AI tutor that turns any math problem into a step-by-step explanation in seconds.
+Turn any math problem into a clear step-by-step explanation in Telegram.  
+Built for students who don’t just want answers — they want understanding.
 </p>
 
 <!-- HERO -->
 <div class="hero">
-  <img src="AI%20Math%20Tutor%20in%20Telegram.png" alt="AI Math Tutor Bot">
+
+  <img class="main" src="AI%20Math%20Tutor%20in%20Telegram.png" alt="AI Math Tutor Bot">
+
+  <div>
+    <h2>From confusion → clarity</h2>
+    <p class="sub">
+      Take a photo of any math problem and get guided explanation instantly.
+    </p>
+
+    <a class="cta" href="https://t.me/master_your_math_bot" target="_blank">
+      🚀 Try in Telegram
+    </a>
+  </div>
+
 </div>
 
-<!-- CTA -->
-<div style="text-align:center;">
-  <a class="button" href="https://t.me/YOUR_BOT_USERNAME" target="_blank">
-    🚀 Try in Telegram
-  </a>
-</div>
-
-<!-- VALUE PROP -->
-<div class="box">
-  <h2>From homework stress → clear understanding</h2>
+<!-- BEFORE / AFTER -->
+<div class="section card">
+  <h2>Before / After</h2>
 
   <div class="grid">
     <div class="card">
       <b>Before</b>
-      <p>Confused math problem<br>
-      No idea how to start<br>
-      Frustration & guessing</p>
+      <p>
+        ❌ Stuck on homework<br>
+        ❌ No clear starting point<br>
+        ❌ Memorizing instead of understanding
+      </p>
     </div>
 
     <div class="card">
       <b>After</b>
-      <p>Step-by-step explanation<br>
-      Clear reasoning<br>
-      Real understanding</p>
+      <p>
+        ✅ Step-by-step reasoning<br>
+        ✅ Clear solution path<br>
+        ✅ Real understanding of math
+      </p>
     </div>
   </div>
 </div>
 
 <!-- HOW IT WORKS -->
-<div class="box">
-<h2>How it works</h2>
-<ul>
-  <li>Take a photo of a math problem</li>
-  <li>Send it to Telegram bot</li>
-  <li>AI reads & understands the task</li>
-  <li>Get step-by-step solution instantly</li>
-</ul>
+<div class="section card">
+  <h2>How it works</h2>
+  <ol>
+    <li>Take a photo of a math problem</li>
+    <li>Send it to Telegram bot</li>
+    <li>AI reads and understands the task</li>
+    <li>Get explanation step-by-step</li>
+  </ol>
 </div>
 
 <!-- FEATURES -->
-<div class="box">
-<h2>Why it works</h2>
-<ul>
-  <li>Built for real school curriculum</li>
-  <li>Explains logic, not just answers</li>
-  <li>Works with handwriting & printed text</li>
-  <li>Multi-language support</li>
-</ul>
+<div class="section card">
+  <h2>Why it works</h2>
+  <ul>
+    <li>Designed for school-level math</li>
+    <li>Explains logic, not just answers</li>
+    <li>Works with handwriting & printed text</li>
+    <li>Multilingual support</li>
+  </ul>
 </div>
 
-<!-- QR SECTION -->
-<div class="box qr">
-  <h2>Scan & try instantly</h2>
+<!-- QR SECTION (REAL + PRODUCT STYLE) -->
+<div class="section card qr-wrap">
 
-  <!-- ЗАГЛУШКА QR -->
-  <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=https://t.me/YOUR_BOT_USERNAME" alt="QR Code">
+  <div class="qr">
+    <!-- REAL QR -->
+    <img 
+      src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=https://t.me/master_your_math_bot"
+      alt="QR Code">
+  </div>
 
-  <p class="small">Open Telegram → start solving in 10 seconds</p>
+  <div>
+    <h2>Scan & start instantly</h2>
+    <p class="sub">
+      No signup. No setup. Just open Telegram and start solving math problems.
+    </p>
+
+    <a class="cta" href="https://t.me/master_your_math_bot" target="_blank">
+      Open Bot
+    </a>
+
+    <p class="small">Works on mobile instantly via QR</p>
+  </div>
+
 </div>
 
 <!-- PRICING -->
-<div class="box">
-<h2>Pricing</h2>
-<p>
-Simple subscription model. Free trial available.
-</p>
+<div class="section card">
+  <h2>Pricing</h2>
+  <p>Simple subscription model with free trial access.</p>
 </div>
 
 <!-- CONTACT -->
-<div class="box">
-<h2>Contact</h2>
-<p>Email: e.kate.taratuta@gmail.com</p>
-</div>
-
-<!-- PRIVACY -->
-<div class="box">
-<h2>Privacy</h2>
-<p>We do not store or sell personal data.</p>
+<div class="section card">
+  <h2>Contact</h2>
+  <p>Email: e.kate.taratuta@gmail.com</p>
 </div>
 
 </body>
