@@ -7,112 +7,182 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      max-width: 800px;
+      max-width: 900px;
       margin: 40px auto;
       padding: 20px;
       line-height: 1.6;
+      color: #111;
     }
 
     h1 {
-      color: #222;
+      font-size: 36px;
+      margin-bottom: 10px;
     }
 
-    .button {
-      display: inline-block;
-      padding: 12px 20px;
-      background: #2b7cff;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      margin-top: 10px;
+    h2 {
+      margin-top: 40px;
     }
 
-    .box {
-      background: #f5f5f5;
-      padding: 15px;
-      border-radius: 10px;
-      margin: 20px 0;
+    .sub {
+      font-size: 18px;
+      color: #555;
+      margin-bottom: 20px;
     }
 
     .hero {
       text-align: center;
-      margin: 25px 0 35px;
+      margin: 30px 0;
     }
 
     .hero img {
       width: 100%;
-      max-width: 700px;
+      max-width: 750px;
+      border-radius: 14px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+    }
+
+    .button {
+      display: inline-block;
+      padding: 14px 22px;
+      background: #2b7cff;
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    .box {
+      background: #f6f6f6;
+      padding: 18px;
       border-radius: 12px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      margin: 20px 0;
+    }
+
+    .grid {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      flex: 1;
+      min-width: 250px;
+      background: #fafafa;
+      padding: 15px;
+      border-radius: 12px;
+      border: 1px solid #eee;
+    }
+
+    .qr {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .qr img {
+      width: 180px;
+      border-radius: 10px;
+      border: 1px solid #ddd;
+    }
+
+    .small {
+      font-size: 13px;
+      color: #666;
     }
   </style>
 </head>
 
 <body>
 
-<h1>AI Math Tutor Telegram Bot</h1>
+<h1>AI Math Tutor Bot</h1>
 
-<p>
-An educational AI assistant helping students solve school math problems step-by-step directly in Telegram.
+<p class="sub">
+A Telegram-based AI tutor that turns any math problem into a step-by-step explanation in seconds.
 </p>
 
-<!-- 🔥 HERO IMAGE (твоя листовка) -->
+<!-- HERO -->
 <div class="hero">
-  <img src="AI%20Math%20Tutor%20in%20Telegram.png" alt="AI Math Tutor Bot Poster">
+  <img src="AI%20Math%20Tutor%20in%20Telegram.png" alt="AI Math Tutor Bot">
 </div>
 
+<!-- CTA -->
+<div style="text-align:center;">
+  <a class="button" href="https://t.me/YOUR_BOT_USERNAME" target="_blank">
+    🚀 Try in Telegram
+  </a>
+</div>
+
+<!-- VALUE PROP -->
+<div class="box">
+  <h2>From homework stress → clear understanding</h2>
+
+  <div class="grid">
+    <div class="card">
+      <b>Before</b>
+      <p>Confused math problem<br>
+      No idea how to start<br>
+      Frustration & guessing</p>
+    </div>
+
+    <div class="card">
+      <b>After</b>
+      <p>Step-by-step explanation<br>
+      Clear reasoning<br>
+      Real understanding</p>
+    </div>
+  </div>
+</div>
+
+<!-- HOW IT WORKS -->
 <div class="box">
 <h2>How it works</h2>
-
 <ul>
-  <li>Students upload a photo of a math task</li>
-  <li>The bot recognizes printed or handwritten text</li>
-  <li>The AI explains the solution step-by-step</li>
-  <li>Supports multiple languages</li>
+  <li>Take a photo of a math problem</li>
+  <li>Send it to Telegram bot</li>
+  <li>AI reads & understands the task</li>
+  <li>Get step-by-step solution instantly</li>
 </ul>
 </div>
 
+<!-- FEATURES -->
 <div class="box">
-<h2>Features</h2>
-
+<h2>Why it works</h2>
 <ul>
-  <li>Telegram-based learning</li>
-  <li>AI-guided explanations</li>
+  <li>Built for real school curriculum</li>
+  <li>Explains logic, not just answers</li>
+  <li>Works with handwriting & printed text</li>
   <li>Multi-language support</li>
-  <li>Interactive tutoring</li>
 </ul>
 </div>
 
+<!-- QR SECTION -->
+<div class="box qr">
+  <h2>Scan & try instantly</h2>
+
+  <!-- ЗАГЛУШКА QR -->
+  <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=https://t.me/YOUR_BOT_USERNAME" alt="QR Code">
+
+  <p class="small">Open Telegram → start solving in 10 seconds</p>
+</div>
+
+<!-- PRICING -->
 <div class="box">
 <h2>Pricing</h2>
-
 <p>
-Subscription-based access.
+Simple subscription model. Free trial available.
 </p>
 </div>
 
+<!-- CONTACT -->
 <div class="box">
 <h2>Contact</h2>
-
-<p>
-Email: e.kate.taratuta@gmail.com
-</p>
+<p>Email: e.kate.taratuta@gmail.com</p>
 </div>
 
+<!-- PRIVACY -->
 <div class="box">
-<h2>Privacy Policy</h2>
-
-<p>
-We do not sell user data.
-</p>
-</div>
-
-<div class="box">
-<h2>Refund Policy</h2>
-
-<p>
-Refund requests are reviewed individually.
-</p>
+<h2>Privacy</h2>
+<p>We do not store or sell personal data.</p>
 </div>
 
 </body>
