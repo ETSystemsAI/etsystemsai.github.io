@@ -257,8 +257,9 @@
     @media(max-width:900px){
 
       .lang-switch{
-        top:20px;
-        right:20px;
+        position:static;
+        justify-content:flex-end;
+        padding:20px 20px 0;
       }
 
       h1{
@@ -307,6 +308,8 @@
     with a dedicated mathematical reasoning engine.
   </div>
 
+  <!-- HIGHLIGHT -->
+
   <div class="highlight" id="highlight">
 
     ✅ Not just a general-purpose chatbot<br>
@@ -314,6 +317,8 @@
     ✅ Built specifically for school mathematics
 
   </div>
+
+  <!-- HERO -->
 
   <div class="hero">
 
@@ -345,6 +350,8 @@
 
   </div>
 
+  <!-- EARLY ACCESS -->
+
   <div class="section">
 
     <div class="card"
@@ -353,11 +360,14 @@
          border:1px solid #dcecff;
          ">
 
-      <div class="section-title" id="early-title" style="margin-top:0;">
+      <div class="section-title"
+           id="early-title"
+           style="margin-top:0;">
         Early Access Testing
       </div>
 
-      <p id="early-text" style="font-size:18px; line-height:1.9; color:#333;">
+      <p id="early-text"
+         style="font-size:18px; line-height:1.9; color:#333;">
 
         AI Math Tutor is currently in its final testing phase.
 
@@ -365,11 +375,255 @@
 
         Every new user receives <b>3 free math tasks</b> to try the system.
 
+        <br><br>
+
+        If you encounter an incorrect solution or explanation,
+        send us screenshots of the issue —
+        and we will add <b>3 additional free tasks</b> to your account.
+
+        <br><br>
+
+        Your feedback helps improve the quality of explanations
+        and train the system on real student problems.
+
+        <br><br>
+
+        <b>Early access pricing is currently available for initial users.</b>
+
       </p>
 
     </div>
 
   </div>
+
+  <!-- STORY -->
+
+  <div class="section">
+
+    <div class="card story">
+
+      <p id="story-text">
+
+        A student sits with a math problem, unsure how to even begin.
+
+        <br><br>
+
+        They open different AI tools, try various prompts,
+        compare conflicting answers,
+        and spend more time fighting the interface than learning mathematics.
+
+        <br><br>
+
+        Generic AI systems may skip steps,
+        hallucinate calculations,
+        or explain things in ways students simply do not understand.
+
+        <br><br>
+
+        <b>AI Math Tutor is built differently.</b>
+
+        <br><br>
+
+        Instead of relying on raw chatbot output,
+        the system combines advanced language models with specialized mathematics software,
+        creating a hybrid AI workflow designed specifically for education.
+
+        <br><br>
+
+        Explanations are structured to guide reasoning step-by-step,
+        helping students understand not only the answer —
+        but how to think through the problem itself.
+
+      </p>
+
+    </div>
+
+  </div>
+
+  <!-- POSITIONING QUOTE -->
+
+  <div class="section">
+
+    <div class="quote" id="big-quote">
+      “The goal is not just to generate an answer —
+      but to guide the student through understandable reasoning.”
+    </div>
+
+  </div>
+
+  <!-- BEFORE / AFTER -->
+
+  <div class="section">
+
+    <div class="section-title" id="before-after-title">
+      Before vs After
+    </div>
+
+    <div class="grid">
+
+      <div class="mini-card">
+
+        <h3 id="before-title">Before</h3>
+
+        <p id="before-text">
+          ❌ Stuck on homework<br>
+          ❌ Trying multiple AI tools<br>
+          ❌ Comparing conflicting answers<br>
+          ❌ Wasting time verifying solutions<br>
+          ❌ Still not understanding the reasoning
+        </p>
+
+      </div>
+
+      <div class="mini-card">
+
+        <h3 id="after-title">After</h3>
+
+        <p id="after-text">
+          ✅ AI combined with specialized math software<br>
+          ✅ One focused tutoring workflow<br>
+          ✅ Clear step-by-step explanations<br>
+          ✅ Less time checking different answers<br>
+          ✅ Real mathematical understanding
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- DEMO -->
+
+  <div class="section">
+
+    <div class="demo">
+
+      <div class="section-title"
+           id="demo-title"
+           style="margin-top:0;">
+        Example interaction
+      </div>
+
+      <div class="chat">
+
+        <div class="bubble user" id="demo-user">
+          Solve: √(4x − y²) − √(y + 2) = √(4x² + y)
+        </div>
+
+        <div class="bubble ai" id="demo-ai">
+          Let’s analyze the domains first.<br><br>
+
+          Since square roots require nonnegative expressions:<br><br>
+
+          4x − y² ≥ 0<br>
+          y + 2 ≥ 0<br>
+          4x² + y ≥ 0<br><br>
+
+          Now we simplify step-by-step...
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- HOW IT WORKS -->
+
+  <div class="section">
+
+    <div class="section-title" id="how-title">
+      How it works
+    </div>
+
+    <div class="grid">
+
+      <div class="mini-card">
+
+        <h3 id="step1-title">1. Upload</h3>
+
+        <p id="step1-text">
+          Take a photo of a handwritten or printed math problem.
+        </p>
+
+      </div>
+
+      <div class="mini-card">
+
+        <h3 id="step2-title">2. Understand</h3>
+
+        <p id="step2-text">
+          AI recognizes the task and interprets mathematical structure.
+        </p>
+
+      </div>
+
+      <div class="mini-card">
+
+        <h3 id="step3-title">3. Verify</h3>
+
+        <p id="step3-text">
+          Specialized mathematics software helps validate calculations and logic.
+        </p>
+
+      </div>
+
+      <div class="mini-card">
+
+        <h3 id="step4-title">4. Explain</h3>
+
+        <p id="step4-text">
+          The student receives understandable step-by-step reasoning.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- QR -->
+
+  <div class="section">
+
+    <div class="card qr-wrap">
+
+      <div class="qr">
+
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=https://t.me/master_your_math_bot"
+             alt="QR code">
+
+      </div>
+
+      <div>
+
+        <div class="section-title"
+             id="qr-title"
+             style="margin-top:0;">
+          Try instantly
+        </div>
+
+        <p class="muted"
+           id="qr-text"
+           style="font-size:18px;">
+          Open Telegram and start solving math problems in seconds.
+        </p>
+
+        <a class="button"
+           id="qr-button"
+           href="https://t.me/master_your_math_bot"
+           target="_blank">
+           Open Bot
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
 
   <footer id="footer">
     AI Math Tutor • Telegram-based educational AI system<br>
@@ -383,9 +637,12 @@
 const translations = {
 
   en: {
-    badge: "TELEGRAM AI EDUCATION TOOL",
 
-    title: "AI Math Tutor",
+    badge:
+      "TELEGRAM AI EDUCATION TOOL",
+
+    title:
+      "AI Math Tutor",
 
     subtitle:
       "A specialized mathematics tutoring system combining advanced AI models with a dedicated mathematical reasoning engine.",
@@ -408,17 +665,87 @@ const translations = {
     earlyText:
       "AI Math Tutor is currently in its final testing phase.<br><br>Every new user receives <b>3 free math tasks</b> to try the system.<br><br>If you encounter an incorrect solution or explanation, send us screenshots of the issue — and we will add <b>3 additional free tasks</b> to your account.<br><br>Your feedback helps improve the quality of explanations and train the system on real student problems.<br><br><b>Early access pricing is currently available for initial users.</b>",
 
+    story:
+      "A student sits with a math problem, unsure how to even begin.<br><br>They open different AI tools, try various prompts, compare conflicting answers, and spend more time fighting the interface than learning mathematics.<br><br>Generic AI systems may skip steps, hallucinate calculations, or explain things in ways students simply do not understand.<br><br><b>AI Math Tutor is built differently.</b><br><br>Instead of relying on raw chatbot output, the system combines advanced language models with specialized mathematics software, creating a hybrid AI workflow designed specifically for education.<br><br>Explanations are structured to guide reasoning step-by-step, helping students understand not only the answer — but how to think through the problem itself.",
+
+    bigQuote:
+      "“The goal is not just to generate an answer — but to guide the student through understandable reasoning.”",
+
+    beforeAfter:
+      "Before vs After",
+
+    beforeTitle:
+      "Before",
+
+    beforeText:
+      "❌ Stuck on homework<br>❌ Trying multiple AI tools<br>❌ Comparing conflicting answers<br>❌ Wasting time verifying solutions<br>❌ Still not understanding the reasoning",
+
+    afterTitle:
+      "After",
+
+    afterText:
+      "✅ AI combined with specialized math software<br>✅ One focused tutoring workflow<br>✅ Clear step-by-step explanations<br>✅ Less time checking different answers<br>✅ Real mathematical understanding",
+
+    demoTitle:
+      "Example interaction",
+
+    demoUser:
+      "Solve: √(4x − y²) − √(y + 2) = √(4x² + y)",
+
+    demoAI:
+      "Let’s analyze the domains first.<br><br>Since square roots require nonnegative expressions:<br><br>4x − y² ≥ 0<br>y + 2 ≥ 0<br>4x² + y ≥ 0<br><br>Now we simplify step-by-step...",
+
+    howTitle:
+      "How it works",
+
+    step1Title:
+      "1. Upload",
+
+    step1Text:
+      "Take a photo of a handwritten or printed math problem.",
+
+    step2Title:
+      "2. Understand",
+
+    step2Text:
+      "AI recognizes the task and interprets mathematical structure.",
+
+    step3Title:
+      "3. Verify",
+
+    step3Text:
+      "Specialized mathematics software helps validate calculations and logic.",
+
+    step4Title:
+      "4. Explain",
+
+    step4Text:
+      "The student receives understandable step-by-step reasoning.",
+
+    qrTitle:
+      "Try instantly",
+
+    qrText:
+      "Open Telegram and start solving math problems in seconds.",
+
+    qrButton:
+      "Open Bot",
+
     footer:
       "AI Math Tutor • Telegram-based educational AI system<br>Contact: e.kate.taratuta@gmail.com",
 
     image:
       "hero-en.png"
+
   },
 
   ru: {
-    badge: "AI СИСТЕМА ОБУЧЕНИЯ В TELEGRAM",
 
-    title: "AI Math Tutor",
+    badge:
+      "AI СИСТЕМА ОБУЧЕНИЯ В TELEGRAM",
+
+    title:
+      "AI Math Tutor",
 
     subtitle:
       "Специализированная система обучения математике, объединяющая современные AI-модели и математический движок.",
@@ -441,17 +768,87 @@ const translations = {
     earlyText:
       "AI Math Tutor сейчас проходит финальное тестирование.<br><br>Каждый новый пользователь получает <b>3 бесплатные задачи</b> для проверки системы.<br><br>Если вы найдете ошибку в решении или объяснении — пришлите скриншоты, и мы добавим вам <b>ещё 3 бесплатные задачи</b>.<br><br>Ваши отзывы помогают улучшать качество объяснений и обучение системы на реальных школьных задачах.<br><br><b>Для первых пользователей сейчас действует специальная цена раннего доступа.</b>",
 
+    story:
+      "Школьник сидит над задачей и не знает, с чего начать.<br><br>Он открывает разные AI-сервисы, пробует разные запросы, сравнивает противоречивые ответы и тратит больше времени на проверку решений, чем на саму математику.<br><br>Обычные AI-системы могут пропускать шаги, ошибаться в вычислениях или объяснять так, что ученик всё равно ничего не понимает.<br><br><b>AI Math Tutor устроен иначе.</b><br><br>Вместо простого чат-бота система объединяет современные языковые модели со специализированным математическим ПО, создавая гибридный AI-подход специально для обучения.<br><br>Объяснения выстроены пошагово, чтобы ученик понимал не только ответ — но и сам ход мысли.",
+
+    bigQuote:
+      "«Цель — не просто выдать ответ, а провести ученика через понятное рассуждение.»",
+
+    beforeAfter:
+      "До и после",
+
+    beforeTitle:
+      "До",
+
+    beforeText:
+      "❌ Непонятно, как начать задачу<br>❌ Постоянные попытки в разных AI<br>❌ Противоречивые ответы<br>❌ Потеря времени на проверку<br>❌ Всё ещё непонятна логика решения",
+
+    afterTitle:
+      "После",
+
+    afterText:
+      "✅ AI + специализированное математическое ПО<br>✅ Единый обучающий workflow<br>✅ Пошаговые объяснения<br>✅ Меньше времени на перепроверку<br>✅ Настоящее понимание математики",
+
+    demoTitle:
+      "Пример общения",
+
+    demoUser:
+      "Реши: √(4x − y²) − √(y + 2) = √(4x² + y)",
+
+    demoAI:
+      "Сначала проанализируем область допустимых значений.<br><br>Подкоренные выражения должны быть неотрицательны:<br><br>4x − y² ≥ 0<br>y + 2 ≥ 0<br>4x² + y ≥ 0<br><br>Теперь упростим шаг за шагом...",
+
+    howTitle:
+      "Как это работает",
+
+    step1Title:
+      "1. Загрузка",
+
+    step1Text:
+      "Сфотографируйте рукописную или печатную задачу.",
+
+    step2Title:
+      "2. Анализ",
+
+    step2Text:
+      "AI распознаёт задачу и математическую структуру.",
+
+    step3Title:
+      "3. Проверка",
+
+    step3Text:
+      "Математическое ПО помогает проверять вычисления и логику.",
+
+    step4Title:
+      "4. Объяснение",
+
+    step4Text:
+      "Ученик получает понятное пошаговое решение.",
+
+    qrTitle:
+      "Попробуйте сразу",
+
+    qrText:
+      "Откройте Telegram и начните решать задачи за секунды.",
+
+    qrButton:
+      "Открыть бота",
+
     footer:
       "AI Math Tutor • AI-система обучения математике в Telegram<br>Contact: e.kate.taratuta@gmail.com",
 
     image:
       "hero-ru.png"
+
   },
 
   sr: {
-    badge: "TELEGRAM AI EDUKATIVNI ALAT",
 
-    title: "AI Math Tutor",
+    badge:
+      "TELEGRAM AI EDUKATIVNI ALAT",
+
+    title:
+      "AI Math Tutor",
 
     subtitle:
       "Specijalizovani AI sistem za učenje matematike sa naprednim matematičkim mehanizmom.",
@@ -474,16 +871,85 @@ const translations = {
     earlyText:
       "AI Math Tutor je trenutno u završnoj fazi testiranja.<br><br>Svaki novi korisnik dobija <b>3 besplatna zadatka</b> za isprobavanje sistema.<br><br>Ako pronađete grešku u rešenju ili objašnjenju — pošaljite screenshot i dobićete <b>još 3 besplatna zadatka</b>.<br><br>Vaše povratne informacije pomažu unapređenju kvaliteta objašnjenja i treniranju sistema na stvarnim školskim zadacima.<br><br><b>Specijalna cena za rane korisnike je trenutno dostupna.</b>",
 
+    story:
+      "Učenik sedi nad matematičkim zadatkom i ne zna kako da počne.<br><br>Otvara različite AI alate, pokušava razne upite, upoređuje kontradiktorne odgovore i troši više vremena na proveru nego na samo učenje matematike.<br><br>Opšti AI sistemi često preskaču korake, greše u računanju ili objašnjavaju na način koji učenici ne razumeju.<br><br><b>AI Math Tutor je napravljen drugačije.</b><br><br>Sistem kombinuje napredne AI modele sa specijalizovanim matematičkim softverom i stvara workflow posebno dizajniran za obrazovanje.<br><br>Objašnjenja vode učenika korak po korak, tako da razume ne samo odgovor — već i način razmišljanja.",
+
+    bigQuote:
+      "„Cilj nije samo dati odgovor — već voditi učenika kroz razumljivo razmišljanje.”",
+
+    beforeAfter:
+      "Pre i posle",
+
+    beforeTitle:
+      "Pre",
+
+    beforeText:
+      "❌ Zbunjen oko domaćeg<br>❌ Korišćenje više AI alata<br>❌ Suprotni odgovori<br>❌ Gubitak vremena na proveru<br>❌ I dalje bez razumevanja",
+
+    afterTitle:
+      "Posle",
+
+    afterText:
+      "✅ AI + specijalizovani matematički softver<br>✅ Jedinstven workflow za učenje<br>✅ Jasna objašnjenja korak po korak<br>✅ Manje vremena za proveravanje<br>✅ Pravo razumevanje matematike",
+
+    demoTitle:
+      "Primer razgovora",
+
+    demoUser:
+      "Reši: √(4x − y²) − √(y + 2) = √(4x² + y)",
+
+    demoAI:
+      "Prvo analiziramo domen.<br><br>Izrazi pod korenom moraju biti nenegativni:<br><br>4x − y² ≥ 0<br>y + 2 ≥ 0<br>4x² + y ≥ 0<br><br>Sada pojednostavljujemo korak po korak...",
+
+    howTitle:
+      "Kako funkcioniše",
+
+    step1Title:
+      "1. Upload",
+
+    step1Text:
+      "Fotografiši rukom pisan ili štampan matematički zadatak.",
+
+    step2Title:
+      "2. Razumevanje",
+
+    step2Text:
+      "AI prepoznaje zadatak i matematičku strukturu.",
+
+    step3Title:
+      "3. Provera",
+
+    step3Text:
+      "Matematički softver proverava logiku i računanje.",
+
+    step4Title:
+      "4. Objašnjenje",
+
+    step4Text:
+      "Učenik dobija jasno objašnjenje korak po korak.",
+
+    qrTitle:
+      "Probajte odmah",
+
+    qrText:
+      "Otvorite Telegram i počnite rešavati zadatke za nekoliko sekundi.",
+
+    qrButton:
+      "Otvori bota",
+
     footer:
-      "AI Math Tutor • Telegram AI sistem za učenje matematike<br>Contact: e.kate.taratuta@gmail.com",
+      "AI Math Tutor • Telegram AI sistem za matematiku<br>Contact: e.kate.taratuta@gmail.com",
 
     image:
       "hero-sr.png"
+
   }
 
 };
 
 function setLang(lang){
+
+  document.documentElement.lang = lang;
 
   document.getElementById("badge").innerHTML =
     translations[lang].badge;
@@ -511,6 +977,72 @@ function setLang(lang){
 
   document.getElementById("early-text").innerHTML =
     translations[lang].earlyText;
+
+  document.getElementById("story-text").innerHTML =
+    translations[lang].story;
+
+  document.getElementById("big-quote").innerHTML =
+    translations[lang].bigQuote;
+
+  document.getElementById("before-after-title").innerHTML =
+    translations[lang].beforeAfter;
+
+  document.getElementById("before-title").innerHTML =
+    translations[lang].beforeTitle;
+
+  document.getElementById("before-text").innerHTML =
+    translations[lang].beforeText;
+
+  document.getElementById("after-title").innerHTML =
+    translations[lang].afterTitle;
+
+  document.getElementById("after-text").innerHTML =
+    translations[lang].afterText;
+
+  document.getElementById("demo-title").innerHTML =
+    translations[lang].demoTitle;
+
+  document.getElementById("demo-user").innerHTML =
+    translations[lang].demoUser;
+
+  document.getElementById("demo-ai").innerHTML =
+    translations[lang].demoAI;
+
+  document.getElementById("how-title").innerHTML =
+    translations[lang].howTitle;
+
+  document.getElementById("step1-title").innerHTML =
+    translations[lang].step1Title;
+
+  document.getElementById("step1-text").innerHTML =
+    translations[lang].step1Text;
+
+  document.getElementById("step2-title").innerHTML =
+    translations[lang].step2Title;
+
+  document.getElementById("step2-text").innerHTML =
+    translations[lang].step2Text;
+
+  document.getElementById("step3-title").innerHTML =
+    translations[lang].step3Title;
+
+  document.getElementById("step3-text").innerHTML =
+    translations[lang].step3Text;
+
+  document.getElementById("step4-title").innerHTML =
+    translations[lang].step4Title;
+
+  document.getElementById("step4-text").innerHTML =
+    translations[lang].step4Text;
+
+  document.getElementById("qr-title").innerHTML =
+    translations[lang].qrTitle;
+
+  document.getElementById("qr-text").innerHTML =
+    translations[lang].qrText;
+
+  document.getElementById("qr-button").innerHTML =
+    translations[lang].qrButton;
 
   document.getElementById("footer").innerHTML =
     translations[lang].footer;
